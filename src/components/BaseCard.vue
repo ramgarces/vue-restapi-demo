@@ -6,17 +6,18 @@ const props = defineProps({
       _id: -1,
       name: 'Unknown',
       imageURL: 'https://via.placeholder.com/150',
-    })
+    }),
   }
 })
 </script>
 
 <template>
-  <RouterLink 
-    to="`/character/${props.character._id}`" 
+  <RouterLink
+    :to="`/character/${props.character._id}`"
     class="rounded-lg bg-white shadow-lg"
   >
-    <img class="w-full rounded-t-lg object-cover" 
+    <img
+      class="w-full rounded-t-lg object-cover"
       :src="props.character.imageUrl"
     />
     <div class="p-4">

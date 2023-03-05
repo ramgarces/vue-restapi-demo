@@ -1,9 +1,12 @@
 import axios from 'axios'
+import { ref } from 'vue'
 
-const apiInstance = axios.create({
-    baseURL: 'https://api.example.com'
+const instance = axios.create({
+    baseURL: 'https://api.disneyapi.dev/'
 })
 
-const useApi = () => { }
+const useApi = () => { 
+    return { instance }
+}
 
 export default useApi
